@@ -1,11 +1,11 @@
-title: Hexo
-subtitle: ''
-description: ''
+title: '如瞬 | As the Wind'
+subtitle: 'As the Wind'
+description: '碎碎念'
 keywords: null
-author: John Doe
-language: en
+author: Kingsley Yoimiya
+language: zh-CN
 timezone: ''
-url: http://example.com
+url: http://kingsley-yoimiya.github.io
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
