@@ -27,6 +27,8 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
+      - name: Uninstall hexo-renderer-marked
+        run: npm un hexo-renderer-marked --save
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
