@@ -1,5 +1,6 @@
 ---
 title: 5 矩阵的相抵与相似-总结
+date: '2024-01-13 18:04:38'
 updated: '2024-01-13 18:04:38'
 excerpt: >-
   矩阵的相抵与相似总结矩阵的相抵设a_{stimesn}证明_a的秩为r的充要条件是存在数域k上stimesr列满秩矩阵和rtimesn行满秩矩阵c使得a=bc。证明rightarrow考虑可逆pq有a=pbegin{pmatrix}i_rend{pmatrix}begin{pmatrix}q_q_end{pmatrix}其中p_r列q_r行。于是a=p_q_。证明leftarrow有r(a)leqslantr(b)因此r(a)leqslantr。而同时r(a)geqslantr(b)r(c)r（练习题目直
