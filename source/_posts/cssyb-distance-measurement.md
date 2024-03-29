@@ -1,6 +1,7 @@
 ---
 title: 程设实习笔记 | 距离度量查询
 date: 2024-03-29 14:55:56
+update: 2024-03-29 15:05:00
 tags:
    - CS/Algorithm
    - random
