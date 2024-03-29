@@ -4,6 +4,8 @@ date: 2024-03-29 14:55:56
 tags:
    - CS/Algorithm
    - random
+excerpt: >-
+   本文主要讨论程设实习课上讲述的几个距离度量、查询相关算法和应用。
 categories: [技术向]
 permalink: /post/cssyb-distance-measurement.html
 comments: true
