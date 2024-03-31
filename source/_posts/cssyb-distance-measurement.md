@@ -80,7 +80,7 @@ comments: true
 
 ### 主要思路
 
-对于集合 $A$ 计算一个 Hash 值 $H(A)$，而两个集合的 Jaccard Similarity $J(A,B)=\begin{cases}\frac{|A\cap B|}{A \cup B} &|A\cup B|\neq 0 \\ 0 & |A\cup B| = 0\end{cases}$ 可以通过 $H(A),H(B)$ 得到。
+对于集合 $A$ 计算一个 Hash 值 $H(A)$，而两个集合的 Jaccard Similarity $J(A,B)=\begin{cases}\frac{|A\cap B|}{|A \cup B|} &|A\cup B|\neq 0 \\ 0 & |A\cup B| = 0\end{cases}$ 可以通过 $H(A),H(B)$ 得到。
 
 ### 具体思路
 
