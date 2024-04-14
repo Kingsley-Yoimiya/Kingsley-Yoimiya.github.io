@@ -13,8 +13,6 @@ permalink: /post/GPT-OOD-I.html
 comments: true
 ---
 
-# 软工实验班 OOD 分析-初稿汇报
-
 ## 问题域分析
 
 ### UML  图
