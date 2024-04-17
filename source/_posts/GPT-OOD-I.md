@@ -1,9 +1,9 @@
 ---
-title: GPT 进行软件分析系列-软工实验班 OOD 分析初稿汇报版
+title: GPT 进行软件分析系列 | 软工实验班 OOD 分析初稿汇报版
 date: '2024-04-14 11:31:00'
 updated: '2024-04-14 11:31:00'
 excerpt: >-
-    GPT 进行软件分析系列-软工实验班 OOD 分析初稿汇报版
+    GPT 进行软件分析系列 | 软工实验班 OOD 分析初稿汇报版
 tags:
    - CS/AI
    - ChatGPT
