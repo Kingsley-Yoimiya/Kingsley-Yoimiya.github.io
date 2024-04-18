@@ -1,9 +1,9 @@
 ---
-title: GPT 进行软件分析系列 | 软工实验班 OOA 分析终稿
+title: GPT 软件分析 | 软工实验班 OOA 分析终稿
 date: '2024-04-09 23:26:00'
 updated: '2024-04-14 11:31:00'
 excerpt: >-
-    GPT 进行软件分析系列 | 软工实验班 OOA 分析终稿
+    GPT 软件分析 | 软工实验班 OOA 分析终稿
 tags:
    - CS/AI
    - ChatGPT
