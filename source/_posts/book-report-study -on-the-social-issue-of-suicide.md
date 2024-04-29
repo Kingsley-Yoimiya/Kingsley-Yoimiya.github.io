@@ -6,6 +6,7 @@ tags:
    - Books/Sociology
 excerpt: >-
    本文是笔者自杀社会问题研究课程的读书报告，通过对于原文观点的梳理，笔者顺着本书作者的思路，从权力游戏的视角，客观看待在中国家庭政治中家庭和谐问题、和家庭和谐密切相关的自杀现象以及自杀预防。
+   不过脚注好像不太能支持，暂时还没有开始修，凑合着看吧。
 categories: [读书向]
 permalink: /post/book-report-study -on-the-social-issue-of-suicide.html
 comments: true
