@@ -16,9 +16,9 @@ comments: true
 
 > 利用幂级数求级数的和（闭式）：
 >
-> $$
+> {% raw %}$$
 > \sum _{n=0}^{\infty }\left(\frac{1}{4n+1} +\frac{1}{4n+3} -\frac{1}{2n+2}\right) 
-> $$
+> $${% endraw %}
 
 ## 错误解法
 
@@ -26,15 +26,15 @@ comments: true
 
 > 记
 >
-> $$
+> {% raw %}$$
 > f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)
-> $$
+> $${% endraw %}
 >
 > ‍
 >
-> 则答案就是 $\displaystyle f(1)$。
+> 则答案就是 {% raw %}$\displaystyle f(1)${% endraw %}。
 >
-> $$
+> {% raw %}$$
 > \begin{aligned}
 > f'( x) & =\sum _{n=0}^{\infty } x^{4n} +x^{4n+2} -x^{2n+1}\\
 >  & =\frac{1}{1-x^{4}} +\frac{x^{2}}{1-x^{4}} -\frac{x}{1-x^{2}}\\
@@ -43,55 +43,55 @@ comments: true
 >  & =\ln( 1+x) | _{0}^{1}\\
 >  & =\ln 2
 > \end{aligned}
-> $$
+> $${% endraw %}
 
-　　问题出在了那里呢？（属于是翘课 + 看书不仔细导致的）其实就在第一步出了错  $f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)$ 因为 $x$  的次幂不同，根本不能保证连续性、换序求导，于是导致了出错。
+　　问题出在了那里呢？（属于是翘课 + 看书不仔细导致的）其实就在第一步出了错  {% raw %}$f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)${% endraw %} 因为 {% raw %}$x${% endraw %}  的次幂不同，根本不能保证连续性、换序求导，于是导致了出错。
 
 ## 正确的解法
 
-$$
+{% raw %}$$
 f( x) =\sum _{n=0}^{\infty }\left(\frac{1}{4n+1} +\frac{1}{4n+3} -\frac{1}{2n+2}\right)x^{4n+4}\\
-$$
+$${% endraw %}
 
-$$
+{% raw %}$$
 f( x) =\sum _{n=0}^{\infty }\left(\frac{1}{4n+1} -\frac{1}{4n+2} +\frac{1}{4n+3} -\frac{1}{4n+4}+\frac{1}{4n+2} -\frac{1}{4n+4}\right)x^{4n+4}
-$$
+$${% endraw %}
 
 　　
 
-其收敛半径为 $1$，且当 $x=1$ 时，$f(1)$ 为两个交错级数的和，收敛，于是 $f(x)$ 在 $(-1,1]$​ 内闭一致收敛。
+其收敛半径为 {% raw %}$1${% endraw %}，且当 {% raw %}$x=1${% endraw %} 时，{% raw %}$f(1)${% endraw %} 为两个交错级数的和，收敛，于是 {% raw %}$f(x)${% endraw %} 在 {% raw %}$(-1,1]${% endraw %}​ 内闭一致收敛。
 
 > 其实如果观察到了这一步就已经可以快速出结果了：
 >
-> $$
+> {% raw %}$$
 > \begin{aligned}
 > S&=\lim_{N\to\infty}\sum_{n=1}^N\left(\frac{1}{4n+1} -\frac{1}{4n+2} +\frac{1}{4n+3} -\frac{1}{4n+4}\right)+\left(\frac{1}{4n+2} -\frac{1}{4n+4}\right)\\
 > S_N&=\sum_{n=1}^{4N+4}(-1)^{n+1}\frac{1}{n} + \frac{1}{2}\sum_{n=1}^{2N + 2}(-1)^{n+1}\frac{1}{n}\\
 > S&=\lim_{N\to\infty}S_N =\sum_{n=1}^{4N+4}(-1)^{n+1}\frac{1}{n} + \frac{1}{2}\sum_{n=1}^{2N + 2}(-1)^{n+1}\frac{1}{n}=\frac{3}{2}\ln2\\
 > \end{aligned}
-> $$
+> $${% endraw %}
 
 　　于是有：
 
-$$
+{% raw %}$$
 \begin{aligned}
 f( x) =&\sum _{n=0}^{\infty }\left(\frac{1}{4n+1} +\frac{1}{4n+3} -\frac{1}{2n+2}\right)x^{4n+4}\\
 =&x^3\left(-\frac{1}{2}\arctan x +\frac{1}{4}\ln(1+x)-\frac{1}{4}\ln(1-x)\right)+\\
 &x\left(-\frac{1}{2}\arctan x + \frac{1}{4}\ln(1+x)-\frac{1}{4}\ln(1-x)\right)+\\
 &\frac{1}{2}\ln(1-x^4)
 \end{aligned}
-$$
+$${% endraw %}
 
-　　其中每项都是先求导再换序最后积分得到（需要**一致连续性质**，以及注意 $f(0) = 0$）。
+　　其中每项都是先求导再换序最后积分得到（需要**一致连续性质**，以及注意 {% raw %}$f(0) = 0${% endraw %}）。
 
-　　而因为 $f(x)$ 在 $(-1,1]$ 一致连续，于是由 Abel 第二引理的推论可以得到（$f(x)$ 在 $(-1,1]$ 连续）：
+　　而因为 {% raw %}$f(x)${% endraw %} 在 {% raw %}$(-1,1]${% endraw %} 一致连续，于是由 Abel 第二引理的推论可以得到（{% raw %}$f(x)${% endraw %} 在 {% raw %}$(-1,1]${% endraw %} 连续）：
 
-$$
+{% raw %}$$
 \begin{aligned}
 f(1)=&\lim_{x\to 1^-}f(x)\\
 =&\frac{1}{2}\ln 2 + \lim_{x\to 1^-} \left(\frac{1}{2}\ln\frac{1-x^4}{(1-x)^{\frac{x}{2}+\frac{x^3}{2}}}\right)\\
 =&\frac{3}{2}\ln 2
 \end{aligned}
-$$
+$${% endraw %}
 
-　　注意，第二步的时候，利用了 $(1-x)^{1-\frac{x}{2}-\frac{x^3}{2}}(x\to 1)=e^{(2t-\frac{3}{2}t^2 + \frac{t^3}{2})\ln t}(t\to0)=1$。
+　　注意，第二步的时候，利用了 {% raw %}$(1-x)^{1-\frac{x}{2}-\frac{x^3}{2}}(x\to 1)=e^{(2t-\frac{3}{2}t^2 + \frac{t^3}{2})\ln t}(t\to0)=1${% endraw %}。
