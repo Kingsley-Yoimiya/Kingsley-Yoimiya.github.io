@@ -17,8 +17,8 @@ comments: true
 > 利用幂级数求级数的和（闭式）：
 >
 > {% raw %}$$
-> \sum _{n=0}^{\infty }\left(\frac{1}{4n+1} +\frac{1}{4n+3} -\frac{1}{2n+2}\right) 
-> $${% endraw %}
+\sum _{n=0}^{\infty }\left(\frac{1}{4n+1} +\frac{1}{4n+3} -\frac{1}{2n+2}\right) 
+$${% endraw %}
 
 ## 错误解法
 
@@ -27,23 +27,22 @@ comments: true
 > 记
 >
 > {% raw %}$$
-> f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)
-> $${% endraw %}
+f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)
+$${% endraw %}
 >
 > ‍
 >
 > 则答案就是 {% raw %}$\displaystyle f(1)${% endraw %}。
 >
-> {% raw %}$$
-> \begin{aligned}
-> f'( x) & =\sum _{n=0}^{\infty } x^{4n} +x^{4n+2} -x^{2n+1}\\
->  & =\frac{1}{1-x^{4}} +\frac{x^{2}}{1-x^{4}} -\frac{x}{1-x^{2}}\\
->  & =\frac{1}{1+x}\\
-> f( 1) =\int _{0}^{1} f'( x)\mathrm{d} x & =\int _{0}^{1}\frac{1}{1+x}\mathrm{d} x\\
->  & =\ln( 1+x) | _{0}^{1}\\
->  & =\ln 2
-> \end{aligned}
-> $${% endraw %}
+> {% raw %}$$\begin{aligned}
+f'( x) & =\sum _{n=0}^{\infty } x^{4n} +x^{4n+2} -x^{2n+1}\\
+& =\frac{1}{1-x^{4}} +\frac{x^{2}}{1-x^{4}} -\frac{x}{1-x^{2}}\\
+& =\frac{1}{1+x}\\
+f( 1) =\int _{0}^{1} f'( x)\mathrm{d} x & =\int _{0}^{1}\frac{1}{1+x}\mathrm{d} x\\
+& =\ln( 1+x) | _{0}^{1}\\
+& =\ln 2
+\end{aligned}
+$${% endraw %}
 
 　　问题出在了那里呢？（属于是翘课 + 看书不仔细导致的）其实就在第一步出了错  {% raw %}$f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)${% endraw %} 因为 {% raw %}$x${% endraw %}  的次幂不同，根本不能保证连续性、换序求导，于是导致了出错。
 
@@ -64,12 +63,12 @@ $${% endraw %}
 > 其实如果观察到了这一步就已经可以快速出结果了：
 >
 > {% raw %}$$
-> \begin{aligned}
-> S&=\lim_{N\to\infty}\sum_{n=1}^N\left(\frac{1}{4n+1} -\frac{1}{4n+2} +\frac{1}{4n+3} -\frac{1}{4n+4}\right)+\left(\frac{1}{4n+2} -\frac{1}{4n+4}\right)\\
-> S_N&=\sum_{n=1}^{4N+4}(-1)^{n+1}\frac{1}{n} + \frac{1}{2}\sum_{n=1}^{2N + 2}(-1)^{n+1}\frac{1}{n}\\
-> S&=\lim_{N\to\infty}S_N =\sum_{n=1}^{4N+4}(-1)^{n+1}\frac{1}{n} + \frac{1}{2}\sum_{n=1}^{2N + 2}(-1)^{n+1}\frac{1}{n}=\frac{3}{2}\ln2\\
-> \end{aligned}
-> $${% endraw %}
+\begin{aligned}
+S&=\lim_{N\to\infty}\sum_{n=1}^N\left(\frac{1}{4n+1} -\frac{1}{4n+2} +\frac{1}{4n+3} -\frac{1}{4n+4}\right)+\left(\frac{1}{4n+2} -\frac{1}{4n+4}\right)\\
+S_N&=\sum_{n=1}^{4N+4}(-1)^{n+1}\frac{1}{n} + \frac{1}{2}\sum_{n=1}^{2N + 2}(-1)^{n+1}\frac{1}{n}\\
+S&=\lim_{N\to\infty}S_N =\sum_{n=1}^{4N+4}(-1)^{n+1}\frac{1}{n} + \frac{1}{2}\sum_{n=1}^{2N + 2}(-1)^{n+1}\frac{1}{n}=\frac{3}{2}\ln2\\
+\end{aligned}
+$${% endraw %}
 
 　　于是有：
 
