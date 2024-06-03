@@ -17,9 +17,7 @@ comments: true
 > 利用幂级数求级数的和（闭式）：
 >
 > $$
-> \begin{equation*}
 > \sum _{n=0}^{\infty }\left(\frac{1}{4n+1} +\frac{1}{4n+3} -\frac{1}{2n+2}\right) 
-> \end{equation*}
 > $$
 
 ## 错误解法
@@ -29,7 +27,7 @@ comments: true
 > 记
 >
 > $$
-> \begin{equation}f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)\end{equation}
+> f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)
 > $$
 >
 > ‍
@@ -37,14 +35,14 @@ comments: true
 > 则答案就是 $\displaystyle f(1)$。
 >
 > $$
-> \begin{align*}
+> \begin{aligned}
 > f'( x) & =\sum _{n=0}^{\infty } x^{4n} +x^{4n+2} -x^{2n+1}\\
 >  & =\frac{1}{1-x^{4}} +\frac{x^{2}}{1-x^{4}} -\frac{x}{1-x^{2}}\\
 >  & =\frac{1}{1+x}\\
 > f( 1) =\int _{0}^{1} f'( x)\mathrm{d} x & =\int _{0}^{1}\frac{1}{1+x}\mathrm{d} x\\
 >  & =\ln( 1+x) | _{0}^{1}\\
 >  & =\ln 2
-> \end{align*}
+> \end{aligned}
 > $$
 
 　　问题出在了那里呢？（属于是翘课 + 看书不仔细导致的）其实就在第一步出了错  $f( x) =\sum _{n=0}^{\infty }\left(\frac{x^{4n+1}}{4n+1} +\frac{x^{4n+3}}{4n+3} -\frac{x^{2n+2}}{2n+2}\right)$ 因为 $x$  的次幂不同，根本不能保证连续性、换序求导，于是导致了出错。
@@ -52,11 +50,11 @@ comments: true
 ## 正确的解法
 
 $$
-\begin{equation}f( x) =\sum _{n=0}^{\infty }\left(\frac{1}{4n+1} +\frac{1}{4n+3} -\frac{1}{2n+2}\right)x^{4n+4}\end{equation}\\
+f( x) =\sum _{n=0}^{\infty }\left(\frac{1}{4n+1} +\frac{1}{4n+3} -\frac{1}{2n+2}\right)x^{4n+4}\\
 $$
 
 $$
-\begin{equation}f( x) =\sum _{n=0}^{\infty }\left(\frac{1}{4n+1} -\frac{1}{4n+2} +\frac{1}{4n+3} -\frac{1}{4n+4}+\frac{1}{4n+2} -\frac{1}{4n+4}\right)x^{4n+4}\end{equation}
+f( x) =\sum _{n=0}^{\infty }\left(\frac{1}{4n+1} -\frac{1}{4n+2} +\frac{1}{4n+3} -\frac{1}{4n+4}+\frac{1}{4n+2} -\frac{1}{4n+4}\right)x^{4n+4}
 $$
 
 　　
